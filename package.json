@@ -1,0 +1,25 @@
+{
+  "name": "webjam-food",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^3.0.0-5",
+    "autoprefixer": "^10.4.0",
+    "gsap": "^3.8.0",
+    "postcss": "^8.3.11",
+    "scrollmagic": "^2.0.8",
+    "tailwindcss": "^2.2.19",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "vite": "^2.6.4"
+  }
+}
