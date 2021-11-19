@@ -1,6 +1,6 @@
 <template>
     <!-- Content container -->
-    <div class="relative w-full p-2">
+    <div class="relative w-full">
         <!-- Content Home -->
         <div id="trigger" class="relative w-full h-screen  bg-black flex flex-col items-center justify-center">
             <div id="animation" class="relative text-white font-sans text-4xl tracking-[1rem] uppercase">delicious <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-5 w-16 h-1 bg-pink-700"></span></div>
@@ -8,7 +8,8 @@
             <button id="button-animation" class="hoverable bg-pink-700 text-white text-opacity-50 hover:text-opacity-100 group uppercase text-l font-semibold mt-10 px-4 py-2 rounded-lg flex items-center justify-center"><a href="#menu" class="block group-hover:scale-95">see menu</a></button>
         </div>
         <div id="trigger-2" class="relative w-full h-screen bg-white">
-            <img id="image_animation" class="w-full h-full object-cover" src="../assets/images/background.jpg">
+            <img id="image_animation" class="w-full h-full object-cover md:hidden" src="../assets/images/background.jpg">
+            <img id="image_animation" class="w-full h-full object-cover hidden md:block" src="../assets/images/background-desktop.jpg">
         </div>
         <!-- Reviews  -->
         <div id="trigger-3" class="relative w-full h-screen bg-black flex flex-col items-center justify-center">
@@ -23,12 +24,13 @@
                   icon="quote-right"></font-awesome-icon
                 >
             </div>
-            <div class="tr3-anim text-white text-2xl font-custom p-10 pt-0 text-center">
+            <div class="tr3-anim text-white text-2xl font-sans p-10 pt-0 text-center md:max-w-4xl">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. A at fugiat molestias quis. Sequi modi, suscipit accusantium iure voluptate voluptatum corrupti officia expedita commodi distinctio!
             </div>
         </div>
         <div class="relative w-full h-screen bg-black">
-            <img class="w-full h-full object-cover" src="../assets/images/background1.jpg" alt="">
+            <img class="w-full h-full object-cover md:hidden" src="../assets/images/background1.jpg" alt="">
+            <img class="w-full h-full object-cover hidden md:block" src="../assets/images/background1-desktop.jpg" alt="">
         </div>
         <!-- The team  -->
         <div id="test-1" class="relative w-full flex flex-col items-center justify-center bg-black min-h-screen mt-8">
@@ -44,7 +46,7 @@
                 <div class="text-white text-2xl text-opacity-50 font-custom mt-4 capitalize">
                     chief executive officer
                 </div>
-                <div class="text-white text-lg mt-4 text-center">
+                <div class="text-white text-lg mt-4 text-center md:max-w-2xl">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, voluptate. Et quos iste odio ipsum?
                 </div>
             </div>
@@ -58,7 +60,7 @@
                 <div class="text-white text-2xl text-opacity-50 font-custom mt-4 capitalize">
                     head chef
                 </div>
-                <div class="text-white text-lg mt-4 text-center">
+                <div class="text-white text-lg mt-4 text-center md:max-w-2xl">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore debitis quod ratione itaque, harum est eius a repellendus. Est.
                 </div>
             </div>
@@ -72,7 +74,7 @@
                 <div class="text-white text-2xl text-opacity-50 font-custom mt-4 capitalize">
                     sous chef
                 </div>
-                <div class="text-white text-lg mt-4 text-center">
+                <div class="text-white text-lg mt-4 text-center md:max-w-2xl">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore debitis quod ratione itaque, harum est eius a repellendus. Est.
                 </div>
             </div>
@@ -82,41 +84,29 @@
             <div class=" relative text-3xl text-black font-sans uppercase tracking-[1rem]">menu<span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-5 w-16 h-1 bg-pink-700"></span></div>
             <div class="relative w-full flex flex-wrap items-center justify-center">
                 <!-- Product  -->
-                <div v-for="product in store.state.products" :key="product.id" class="relative m-16 mb-0 flex flex-wrap justify-center w-max cursor-pointer group transition-all duration-300">
+               <div
+                  v-for="product in store.state.products"
+                  :key="product.id"
+                  class="product-animation relative m-16 mb-0 flex flex-wrap justify-center md:w-60"
+                >
                     <div class="relative flex flex-col items-center">
-                        <div class="w-40 h-40 relative transition-all duration-300 hoverable group-hover:filter group-hover:brightness-50">
+                        <!-- Product Image  -->
+                        <div class="w-40 h-40 relative transition-all duration-300 hoverable">
                             <img class="w-full h-full object-cover object-bottom" :src="getImageUrl(product.imageUrl)" alt="">
                         </div>
+                        <!-- Product info  -->
                         <div class="text-black font-sans w-full flex justify-between items-center p-2">
                             <h1 class="capitalize text-pink-500">{{ product.name }}</h1>
-                            <p class="text-green-400">${{ product.price }}</p>
+                            <p class="text-green-400 ml-2">${{ product.price / 100 }}</p>
                         </div>
+                        <!-- Add button  -->
+                        <button
+                          @click="addToCart(product.id)"
+                          title="Add to cart"
+                          class="text-black capitalize bg-green-400 py-2 px-2 rounded-lg transform hover:bg-green-500 hover:text-white active:scale-90"
+                        >Add to cart</button>
                     </div>
                 </div>
-                <!-- Product  -->
-                <!-- <div class="relative m-16 mb-0 flex flex-wrap justify-center w-max cursor-pointer group transition-all duration-300">
-                    <div class="relative flex flex-col items-center">
-                        <div class="w-40 h-40 relative transition-all duration-300 hoverable group-hover:filter group-hover:brightness-50">
-                            <img class="w-full h-full object-cover object-bottom" src="../assets/products/muffin.jpg" alt="">
-                        </div>
-                        <div class="text-black font-sans w-full flex justify-between items-center p-2">
-                            <h1 class="capitalize text-pink-500">muffin</h1>
-                            <p class="text-green-400"> $ 4.99</p>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- Product  -->
-                <!-- <div class="relative mb-0 m-16 flex flex-wrap justify-center w-max cursor-pointer group transition-all duration-300">
-                    <div class="relative flex flex-col items-center">
-                        <div class="w-40 h-40 relative transition-all duration-300 hoverable group-hover:filter group-hover:brightness-50">
-                            <img class="w-full h-full object-cover object-bottom" src="../assets/products/marshmallow-cake.jpg" alt="">
-                        </div>
-                        <div class="text-black font-sans w-full flex justify-between items-center p-2">
-                            <h1 class="capitalize text-pink-500">marshmallow</h1>
-                            <p class="text-green-400"> $ 6.99</p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
@@ -132,6 +122,11 @@
 
     const getImageUrl = (url) => {
         return new URL(`../assets/products/${url}`, import.meta.url).href
+    }
+
+    const addToCart = (id) => {
+        console.log(`clicked item id: ${id}`)
+        store.methods.cart.add(id)
     }
 
     onMounted(() => {
@@ -198,6 +193,16 @@
                 start: 'top bottom',
                 end: 'bottom bottom',
                 scrub: true,
+            }
+        })
+        gsap.from('.product-animation', {
+            opacity: 0,
+            stagger: .2,
+            scrollTrigger: {
+                trigger: '#menu',
+                start: 'top 80%',
+                end: 'bottom bottom',
+                scrub: false
             }
         })
         

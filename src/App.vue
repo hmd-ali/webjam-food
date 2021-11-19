@@ -1,11 +1,13 @@
 <template>
   <div class="relative w-full bg-black overflow-x-hidden">
     <Header />
+    <CartContainer />
     <MobileNav />
     <Hero />
     <Content />
-    <CustomCursor />
+    <!-- <CustomCursor /> -->
     <Footer />
+    <Notification />
   </div>
 </template>
 
@@ -17,6 +19,8 @@ import Hero from './components/Hero.vue'
 import CustomCursor from './components/CustomCursor.vue'
 import Content from './components/Content.vue'
 import Footer from './components/Footer.vue'
+import CartContainer from './components/CartContainer.vue'
+import Notification from './components/Notification.vue'
 // import gsap from 'gsap'
 import { inject, watchEffect } from 'vue'
 
@@ -27,7 +31,9 @@ export default {
     Hero,
     CustomCursor,
     Content,
+    CartContainer,
     Footer,
+    Notification,
   },
   setup(){
     const store = inject('store')

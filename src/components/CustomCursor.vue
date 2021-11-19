@@ -1,5 +1,5 @@
 <template>
-    <div id="custom_cursor" class="w-3 h-3 bg-green-700 fixed left-0 top-0 transform -translate-x-1/2 -translate-y-1/2 rotate-45 pointer-events-none z-[99] sm:block">
+    <div id="custom_cursor" class="w-3 h-3 bg-green-700 fixed left-0 top-0 transform -translate-x-1/2 -translate-y-1/2 rotate-45 pointer-events-none z-[99] sm:block hidden">
         
     </div>
 </template>

@@ -3,16 +3,12 @@
         <div class="text-2xl font-bold text-green-400 w-full hoverable cursor-pointer">
             Cake<span class="text-pink-700 font-thin">UwU</span>
         </div>
-        <div class="w-full items-center flex justify-center">
-            <svg width="61" height="46" viewBox="0 0 61 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path id="pathh" d="M0.5 25.5C6 22.1667 17.5 13.5 19.5 5.5C22 -4.5 9.5 31.5 14.5 35C19.5 38.5 17 21.5 10.5 15C4 8.5 17.5 32.5 33 8.5C48.5 -15.5 16 22 30 28.5C44 35 39.5 22 39 18.5C38.6 15.7 41.1667 22 42.5 25.5C42.5 23.8333 43.1 21 45.5 23C48.5 25.5 52 24.5 58.5 15C65 5.5 43 38 48 45" stroke="white"/>
-</svg>
-        </div>
         <div id="button"  class="w-full flex justify-end items-center">
+            <Cart />
             <font-awesome-icon
               :icon="['fas','bars']"
               @click="handleToggle"
-              class="hoverable text-2xl text-pink-700 cursor-pointer"
+              class="hoverable text-2xl text-pink-700 cursor-pointer m-2"
             />
         </div>
     </div>
@@ -21,8 +17,12 @@
 <script>
 
 import { inject, onMounted } from 'vue'
+import Cart from './Cart.vue'
 
 export default {
+    components:{
+        Cart,
+    },
     setup(){
         const store = inject('store')
 
@@ -56,22 +56,6 @@ export default {
     }
 }
 </script>
-
-
-<style>
-  #pathh {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: dash 5s linear forwards;
-  transition: all ease;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-</style>
 
 
 

@@ -40,7 +40,7 @@
             transition-all
             duration-300
           "
-          href="#"
+          href="#home"
           >Home
           <span
             class="
@@ -85,6 +85,7 @@
           ></span
         ></a>
         <a
+          @click="close"
           class="
             text-green-500 text-3xl
             font-bold
@@ -96,8 +97,8 @@
             transition-all
             duration-300
           "
-          href="#"
-          >Order now
+          href="#menu"
+          >Menu
           <span
             class="
               absolute
@@ -124,6 +125,13 @@ import gsap from "gsap";
 export default {
   setup() {
     const store = inject("store");
+
+
+    const close = () => {
+      store.methods.navMenu.close()
+
+    }
+
 
     const beforeEnter = (el) => {
       gsap.set(".menu-animation", {
@@ -163,6 +171,7 @@ export default {
       beforeEnter,
       enter,
       leave,
+      close
     };
   },
 };

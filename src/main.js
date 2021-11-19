@@ -9,9 +9,9 @@ import './index.css'
 
 // fontawsome
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faBars, faAngleDown, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faBars, faAngleDown, faQuoteRight, faShoppingCart, faTimes, faPlus, faMinus, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faUserSecret, faBars, faAngleDown, faQuoteRight)
+library.add(faUserSecret, faBars, faAngleDown, faQuoteRight, faShoppingCart, faTimes, faMinus, faPlus, faArrowLeft)
 
 // ScrollMagic
 
