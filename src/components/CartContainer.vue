@@ -5,7 +5,7 @@
         @leave="leave"
         :css="false"
     >
-        <div v-show="store.state.cartContainerToggled" class="fixed z-40 lg:max-w-3xl lg:right-0 lg:left-auto top-0 left-0 w-full h-screen flex flex-col bg-gray-50 text-gray-800 pt-20 p-2">
+        <div v-show="store.state.cartContainerToggled" class="fixed z-40 lg:max-w-xl lg:right-0 lg:left-auto top-0 left-0 w-full h-screen flex flex-col bg-gray-50 text-gray-800 pt-20 p-2">
 
             <!-- Continue shopping button -->
             <div class="relative  pl-4 p-4 mb-2 flex items-center group cursor-pointer rounded bg-green-400 text-white" @click="close">
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <!-- if there's items in the cart show this div  -->
-            <div v-if="store.state.cart.length !== 0" class="relative w-full max-w-full h-full overflow-y-auto p-1">
+            <div v-if="store.state.cart.length !== 0" class="relative w-full max-w-full h-full overflow-y-auto p-1 custom-scroll">
                 <!-- cart item  -->
                 <div v-for="item in store.state.cart" :key="item.id" class="relative w-full flex flex-col items-center my-8 select-none border-b-2">
                     <div class="relative w-full flex items-center">
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <!-- remove item button  -->
-                            <div @click="remove(item.id)" class="absolute -top-3 -left-1 rounded-full bg-red-500 w-3 h-3 flex items-center justify-center cursor-pointer">
+                            <div @click="remove(item.id)" class="absolute -top-3 -left-1 rounded-full bg-red-500 w-3 h-3 flex items-center justify-center cursor-pointer" title="Remove Item">
                                 <font-awesome-icon class="text-xs text-white" icon="times"/>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                         </div>
                         <div class="relative w-[30%] flex items-center justify-center">
                             <!-- decrease item by 1 -->
-                            <div @click="removeItem(item.id)" :class="item.quantity === 1 ? 'text-opacity-40 cursor-not-allowed' : 'hover:bg-pink-700 hover:text-white' " class="relative text-gray-800  rounded-full flex items-center justify-center p-1">
+                            <div @click="removeItem(item.id)" :class="item.quantity === 1 ? 'text-opacity-40 cursor-not-allowed' : 'hover:bg-pink-700 hover:text-white' " class="relative text-gray-800  rounded-full flex items-center justify-center p-1" :title="`Remove 1 ${item.name}`">
                                 <font-awesome-icon  class="text-xs" icon="minus"/>
                             </div>
                             <!-- item quantity -->
@@ -60,7 +60,7 @@
                                 {{ item.quantity }}
                             </div>
                             <!-- increase item by 1 -->
-                            <div @click="addItem(item.id)" class="relative text-gray-800 hover:bg-pink-700 hover:text-white rounded-full flex items-center justify-center p-1">
+                            <div @click="addItem(item.id)" class="relative text-gray-800 hover:bg-pink-700 hover:text-white rounded-full flex items-center justify-center p-1" :title="`Add 1 ${item.name}`">
                                 <font-awesome-icon class="text-xs" icon="plus"/>
                             </div>
                         </div>

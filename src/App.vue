@@ -64,13 +64,13 @@ html{
 body.no-scroll{
   @apply overflow-hidden
 }
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, .custom-scroll::-webkit-scrollbar {
   @apply w-2
 }
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track, .custom-scroll::-webkit-scrollbar-track {
   @apply shadow-inner rounded-lg bg-none
 }
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, .custom-scroll::-webkit-scrollbar-thumb {
   @apply rounded-lg bg-green-400
 
 }

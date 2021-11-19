@@ -7,7 +7,7 @@
     >
         <div
           v-show="store.state.error"
-          class="fixed w-60 p-2 pr-4 bg-red-600 bottom-5 right-5 flex items-center rounded-full z-50"
+          class="fixed w-60 p-2 pr-4 bg-red-600 bottom-5 left-5 flex items-center rounded-full z-50"
         >
             <div class="relative w-full text-white pl-2 pr-2">
                 Item already in cart
