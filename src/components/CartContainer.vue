@@ -33,7 +33,7 @@
                 <div v-for="item in store.state.cart" :key="item.id" class="relative w-full flex flex-col items-center my-8 select-none border-b-2">
                     <div class="relative w-full flex items-center">
                         <div class="relative w-[50%] max-w-[50%] flex items-center min-w-min">
-                            <!-- cart image  -->
+                            <!-- cart item image  -->
                             <img class="w-12 h-12 min-w-[3rem] min-h-[3rem] object-cover m-1 rounded-lg" :src="getImageUrl(item.imageUrl)" :alt="`${item.name} image`">
                             <div class="relative w-full h-full flex flex-col">
                                 <!-- cart item name -->

@@ -46,7 +46,7 @@
                 <div class="text-white text-2xl text-opacity-50 font-custom mt-4 capitalize">
                     chief executive officer
                 </div>
-                <div class="text-white text-lg mt-4 text-center md:max-w-2xl">
+                <div class="text-white text-lg mt-4 text-center px-4 max-w-2xl">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, voluptate. Et quos iste odio ipsum?
                 </div>
             </div>
@@ -60,7 +60,7 @@
                 <div class="text-white text-2xl text-opacity-50 font-custom mt-4 capitalize">
                     head chef
                 </div>
-                <div class="text-white text-lg mt-4 text-center md:max-w-2xl">
+                <div class="text-white text-lg mt-4 text-center px-4 max-w-2xl">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore debitis quod ratione itaque, harum est eius a repellendus. Est.
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <div class="text-white text-2xl text-opacity-50 font-custom mt-4 capitalize">
                     sous chef
                 </div>
-                <div class="text-white text-lg mt-4 text-center md:max-w-2xl">
+                <div class="text-white text-lg mt-4 text-center px-4 max-w-2xl">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore debitis quod ratione itaque, harum est eius a repellendus. Est.
                 </div>
             </div>
@@ -92,7 +92,7 @@
                     <div class="relative flex flex-col items-center">
                         <!-- Product Image  -->
                         <div class="w-40 h-40 relative transition-all duration-300 hoverable">
-                            <img class="w-full h-full object-cover object-bottom" :src="getImageUrl(product.imageUrl)" alt="">
+                            <img class="w-full h-full object-cover object-bottom rounded-lg" :src="getImageUrl(product.imageUrl)" alt="">
                         </div>
                         <!-- Product info  -->
                         <div class="text-black font-sans w-full flex justify-between items-center p-2">
@@ -103,7 +103,7 @@
                         <button
                           @click="addToCart(product.id)"
                           title="Add to cart"
-                          class="text-black capitalize bg-green-400 py-2 px-2 rounded-lg transform hover:bg-green-500 hover:text-white active:scale-90"
+                          class="text-white capitalize bg-green-400 py-2 px-2 rounded-lg transform hover:bg-green-500 hover:text-white active:scale-90"
                         >Add to cart</button>
                     </div>
                 </div>
