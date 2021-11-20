@@ -12,7 +12,7 @@
             <div class="relative w-full text-white pl-2 pr-2">
                 Item already in cart
             </div>
-            <font-awesome-icon @click="close" class="cursor-pointer hoverable text-white hover:text-gray-400 hover:transform hover:scale-90" icon="times"/>
+            <font-awesome-icon @click="close" class="cursor-pointer text-white hover:text-gray-400 hover:transform hover:scale-90" icon="times"/>
         </div>
     </transition>
 </template>

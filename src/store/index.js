@@ -81,7 +81,6 @@ const methods = {
                 return
             } else {
                 state.cart.push( {...state.products.find((x) => x.id === id), quantity: 1} )
-                console.log(state.cart)
             }
         },
         remove(id){

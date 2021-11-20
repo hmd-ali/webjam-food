@@ -52,7 +52,7 @@
                         </div>
                         <div class="relative w-[30%] flex items-center justify-center">
                             <!-- decrease item by 1 -->
-                            <div @click="removeItem(item.id)" :class="item.quantity === 1 ? 'text-opacity-40 cursor-not-allowed' : 'hover:bg-pink-700 hover:text-white' " class="relative text-gray-800  rounded-full flex items-center justify-center p-1" :title="`Remove 1 ${item.name}`">
+                            <div @click="removeItem(item.id)" :class="item.quantity === 1 ? 'text-opacity-40 cursor-not-allowed' : 'hover:bg-pink-700 hover:text-white cursor-pointer' " class="relative text-gray-800  rounded-full flex items-center justify-center p-1" :title="`Remove 1 ${item.name}`">
                                 <font-awesome-icon  class="text-xs" icon="minus"/>
                             </div>
                             <!-- item quantity -->
@@ -60,7 +60,7 @@
                                 {{ item.quantity }}
                             </div>
                             <!-- increase item by 1 -->
-                            <div @click="addItem(item.id)" class="relative text-gray-800 hover:bg-pink-700 hover:text-white rounded-full flex items-center justify-center p-1" :title="`Add 1 ${item.name}`">
+                            <div @click="addItem(item.id)" class="relative text-gray-800 hover:bg-pink-700 hover:text-white rounded-full flex items-center justify-center p-1 cursor-pointer" :title="`Add 1 ${item.name}`">
                                 <font-awesome-icon class="text-xs" icon="plus"/>
                             </div>
                         </div>

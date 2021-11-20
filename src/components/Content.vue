@@ -5,14 +5,14 @@
         <div id="trigger" class="relative w-full h-screen  bg-black flex flex-col items-center justify-center">
             <div id="animation" class="relative text-white font-sans text-4xl tracking-[1rem] uppercase">delicious <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-5 w-16 h-1 bg-pink-700"></span></div>
             <div id="animation-2" class="text-white text-3xl font-custom mt-8 text-opacity-50">Premium culinary specials.</div>
-            <button id="button-animation" class="hoverable bg-pink-700 text-white text-opacity-50 hover:text-opacity-100 group uppercase text-l font-semibold mt-10 px-4 py-2 rounded-lg flex items-center justify-center"><a href="#menu" class="block group-hover:scale-95">see menu</a></button>
+            <button id="button-animation" class=" bg-pink-700 text-white text-opacity-50 hover:text-opacity-100 group uppercase text-l font-semibold mt-10 px-4 py-2 rounded-lg flex items-center justify-center"><a href="#menu" class="block group-hover:scale-95">see menu</a></button>
         </div>
         <div id="trigger-2" class="relative w-full h-screen bg-white">
             <img id="image_animation" class="w-full h-full object-cover md:hidden" src="../assets/images/background.jpg">
             <img id="image_animation" class="w-full h-full object-cover hidden md:block" src="../assets/images/background-desktop.jpg">
         </div>
         <!-- Reviews  -->
-        <div id="trigger-3" class="relative w-full h-screen bg-black flex flex-col items-center justify-center">
+        <div id="reviews" class="relative w-full h-screen bg-black flex flex-col items-center justify-center">
             <div class="tr3-anim relative text-white font-sans text-4xl tracking-[1rem] uppercase">reviews<span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-5 w-16 h-1 bg-pink-700"></span>
             </div>
             <div class="tr3-anim text-white text-3xl font-custom mt-8 text-opacity-50">
@@ -33,7 +33,7 @@
             <img class="w-full h-full object-cover hidden md:block" src="../assets/images/background1-desktop.jpg" alt="">
         </div>
         <!-- The team  -->
-        <div id="test-1" class="relative w-full flex flex-col items-center justify-center bg-black min-h-screen mt-8">
+        <div id="team" class="relative w-full flex flex-col items-center justify-center bg-black min-h-screen mt-8">
             <div class=" relative text-3xl text-white font-sans uppercase tracking-[1rem]">the team<span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-5 w-16 h-1 bg-pink-700"></span></div>
             <div class="text-white font-custom mt-8 text-3xl text-opacity-50 capitalize">experience and commitment</div>
             <div class="relative w-full flex flex-col items-center mt-8">
@@ -91,7 +91,7 @@
                 >
                     <div class="relative flex flex-col items-center">
                         <!-- Product Image  -->
-                        <div class="w-40 h-40 relative transition-all duration-300 hoverable">
+                        <div class="w-40 h-40 relative transition-all duration-300 ">
                             <img class="w-full h-full object-cover object-bottom rounded-lg" :src="getImageUrl(product.imageUrl)" alt="">
                         </div>
                         <!-- Product info  -->
@@ -125,7 +125,6 @@
     }
 
     const addToCart = (id) => {
-        console.log(`clicked item id: ${id}`)
         store.methods.cart.add(id)
     }
 
@@ -178,18 +177,18 @@
             opacity: 0,
             stagger: .2,
             scrollTrigger:{
-                trigger: '#trigger-3',
+                trigger: '#reviews',
                 start: 'top center',
                 end: 'top top',
                 scrub: true
             }
         })
-        gsap.from('#test-1 > *',{
+        gsap.from('#team > *',{
             opacity: 0,
             scale: 0,
             stagger: .2,
             scrollTrigger:{
-                trigger: '#test-1',
+                trigger: '#team',
                 start: 'top bottom',
                 end: 'bottom bottom',
                 scrub: true,

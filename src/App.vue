@@ -5,7 +5,6 @@
     <MobileNav />
     <Hero />
     <Content />
-    <!-- <CustomCursor /> -->
     <Footer />
     <Notification />
   </div>
@@ -16,12 +15,10 @@
 import Header from './components/Header.vue'
 import MobileNav from './components/MobileNav.vue'
 import Hero from './components/Hero.vue'
-import CustomCursor from './components/CustomCursor.vue'
 import Content from './components/Content.vue'
 import Footer from './components/Footer.vue'
 import CartContainer from './components/CartContainer.vue'
 import Notification from './components/Notification.vue'
-// import gsap from 'gsap'
 import { inject, watchEffect } from 'vue'
 
 export default {
@@ -29,7 +26,6 @@ export default {
     Header,
     MobileNav,
     Hero,
-    CustomCursor,
     Content,
     CartContainer,
     Footer,
@@ -57,9 +53,6 @@ export default {
 *{
   margin: 0;
   padding: 0;
-}
-html{
-  scroll-behavior: smooth;
 }
 body.no-scroll{
   @apply overflow-hidden
