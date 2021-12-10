@@ -6,7 +6,7 @@
     @leave="leave"
   >
     <div v-show="store.state.navMenuToggled" class="fixed top-0 left-0 w-screen h-screen z-40">
-      <div  class="relative bg-black w-full h-full flex flex-col items-center justify-center menu-bg">
+      <div  class="relative from-green-400 via-purple-600 to-pink-600 bg-gradient-to-tr w-full h-full flex flex-col items-center justify-center menu-bg">
         <a @click="close" class="m-4 text-center py-1 px-2 rounded-xl group hover:bg-green-500 focus:scale-90" href="#home"><span class="transform group-hover:scale-90 inline-block text-white text-2xl uppercase">home</span></a>
         <a @click="close" class="m-4 text-center py-1 px-2 rounded-xl group hover:bg-green-500 focus:scale-90" href="#reviews"><span class="transform group-hover:scale-90 inline-block text-white text-2xl uppercase">reviews</span></a>
         <a @click="close" class="m-4 text-center py-1 px-2 rounded-xl group hover:bg-green-500 focus:scale-90" href="#team"><span class="transform group-hover:scale-90 inline-block text-white text-2xl uppercase">the team</span></a>
@@ -52,9 +52,3 @@
   }
 
 </script>
-<style scoped>
-  .menu-bg{
-    background: url('../assets/images/menu.jpg');
-    background-size: cover;
-  }
-</style>

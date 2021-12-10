@@ -53,6 +53,8 @@ export default {
 *{
   margin: 0;
   padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(52, 211, 153) transparent;
 }
 body.no-scroll{
   @apply overflow-hidden
