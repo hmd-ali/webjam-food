@@ -7,6 +7,8 @@
     <Content />
     <Footer />
     <Notification />
+    <Order />
+    <SuccessfulOrder />
   </div>
 </template>
 
@@ -19,6 +21,8 @@ import Content from './components/Content.vue'
 import Footer from './components/Footer.vue'
 import CartContainer from './components/CartContainer.vue'
 import Notification from './components/Notification.vue'
+import Order from './components/Order.vue'
+import SuccessfulOrder from './components/SuccessfulOrder.vue'
 import { inject, watchEffect } from 'vue'
 
 export default {
@@ -30,6 +34,8 @@ export default {
     CartContainer,
     Footer,
     Notification,
+    Order,
+    SuccessfulOrder
   },
   setup(){
     const store = inject('store')

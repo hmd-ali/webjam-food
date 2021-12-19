@@ -85,9 +85,9 @@
                     $ {{ total }}
                 </div>
                 <!-- checkout button  -->
-                <div :class="store.state.cart.length === 0 ? 'bg-opacity-50 cursor-not-allowed' : 'bg-opacity-100 hover:bg-pink-800' " class="p-4 bg-pink-700 rounded text-white w-full text-center text-lg capitalize cursor-pointer transition-all duration-300">
+                <button @click="proceed" :class="store.state.cart.length === 0 ? 'bg-opacity-50 cursor-not-allowed' : 'bg-opacity-100 hover:bg-pink-800' " class="p-4 bg-pink-700 rounded text-white w-full text-center text-lg capitalize cursor-pointer transition-all duration-300" :disabled="store.state.cart.length === 0">
                     proceed to checkout
-                </div>
+                </button>
             </div>
         </div>
     </transition>
@@ -140,6 +140,10 @@
             ease: 'Power2.out',
             onComplete: done
         })
+    }
+    const proceed = () => {
+        store.methods.orderModal.open()
+        close()
     }
     const getImageUrl = (url) => {
         return new URL(`../assets/products/${url}`, import.meta.url).href

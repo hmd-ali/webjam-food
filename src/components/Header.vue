@@ -1,7 +1,7 @@
 <template>
     <div class="fixed z-50 top-0 left-0 w-full p-4 flex items-center justify-between">
         <div class="text-2xl font-bold text-green-400 w-full cursor-pointer">
-            Cake<span class="text-pink-700 font-thin">UwU</span>
+            Cake<span class="text-pink-700 font-thin">Bakery</span>
         </div>
         <div id="button"  class="w-full flex justify-end items-center">
             <Cart />

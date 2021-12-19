@@ -5,6 +5,8 @@ const state = reactive({
     cartContainerToggled: false,
     cart: [],
     error: false,
+    successful: false,
+    orderModalToggled: false,
     products:[
         {
             id: 1,
@@ -91,6 +93,9 @@ const methods = {
         },
         removeItem(id){
             state.cart.find(item => item.id === id).quantity <= 1 ? {} : state.cart.find(item => item.id === id).quantity -= 1
+        },
+        clear(){
+            state.cart = []
         }
     },
     cartContainer:{
@@ -105,6 +110,23 @@ const methods = {
     error:{
         close(){
             state.error = false
+        }
+    },
+    successful:{
+        open(){
+            state.successful = true
+        },
+        close(){
+            state.successful = false
+        }
+    },
+
+    orderModal:{
+        open(){
+            state.orderModalToggled = true
+        },
+        close(){
+            state.orderModalToggled = false
         }
     }
 }
