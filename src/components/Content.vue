@@ -25,7 +25,7 @@
                 >
             </div>
             <div class="tr3-anim text-white text-2xl font-sans p-10 pt-0 text-center md:max-w-4xl">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. A at fugiat molestias quis. Sequi modi, suscipit accusantium iure voluptate voluptatum corrupti officia expedita commodi distinctio!
+                Thank you so very, very much for the Molten Dark Chocolate cake.  It was absolutely adorable.  You do amazing work. We will definitely remember you for future orders
             </div>
         </div>
         <div class="relative w-full h-screen bg-black">
@@ -38,45 +38,45 @@
             <div class="text-white font-custom mt-8 text-3xl text-opacity-50 capitalize">experience and commitment</div>
             <div class="relative w-full flex flex-col items-center mt-8">
                 <div>
-                    <img class="w-40 h-40 object-cover rounded-full" src="../assets/images/cake-avatar.jpg" alt="">
+                    <img class="w-40 h-40 object-cover rounded-full" src="../assets/images/ceo_avatar.jpg" alt="">
                 </div>
                 <div class="text-white text-2xl mt-4 capitalize">
-                    cake
+                    Marie-Antoine Carême
                 </div>
                 <div class="text-white text-2xl text-opacity-50 font-custom mt-4 capitalize">
                     chief executive officer
                 </div>
-                <div class="text-white text-lg mt-4 text-center px-4 max-w-2xl">
+                <!-- <div class="text-white text-lg mt-4 text-center px-4 max-w-2xl">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, voluptate. Et quos iste odio ipsum?
-                </div>
+                </div> -->
             </div>
             <div class="relative flex flex-col w-full items-center mt-8">
                 <div>
-                    <img src="../assets/images/pepe.png" class="w-40 h-40 object-cover rounded-full bg-white" alt="">
+                    <img src="../assets/images/head_chef.webp" class="w-40 h-40 object-cover rounded-full bg-white" alt="">
                 </div>
                 <div class="text-white mt-4 text-2xl capitalize">
-                    Pepe the frog
+                    Jennifer Mary Paterson
                 </div>
                 <div class="text-white text-2xl text-opacity-50 font-custom mt-4 capitalize">
                     head chef
                 </div>
-                <div class="text-white text-lg mt-4 text-center px-4 max-w-2xl">
+                <!-- <div class="text-white text-lg mt-4 text-center px-4 max-w-2xl">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore debitis quod ratione itaque, harum est eius a repellendus. Est.
-                </div>
+                </div> -->
             </div>
             <div class="relative flex flex-col w-full items-center mt-8">
                 <div>
-                    <img src="../assets/images/doge.jpg" class="w-40 h-40 object-cover rounded-full bg-white" alt="">
+                    <img src="../assets/images/souschef_avatar.jpg" class="w-40 h-40 object-cover rounded-full bg-white" alt="">
                 </div>
                 <div class="text-white mt-4 text-2xl capitalize">
-                    doge
+                    Anthony Bourdain
                 </div>
                 <div class="text-white text-2xl text-opacity-50 font-custom mt-4 capitalize">
-                    sous chef
+                    shous-chef
                 </div>
-                <div class="text-white text-lg mt-4 text-center px-4 max-w-2xl">
+                <!-- <div class="text-white text-lg mt-4 text-center px-4 max-w-2xl">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore debitis quod ratione itaque, harum est eius a repellendus. Est.
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- Menu  -->

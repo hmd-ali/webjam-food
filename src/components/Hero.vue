@@ -6,7 +6,7 @@
         <div class="z-10 relative w-full h-screen flex flex-col items-center justify-center bg-white bg-opacity-10">
             <div id="hero_title" class="text-5xl text-pink-700 font-bold opacity-0 mt-24">
                 Modern &
-                <br>Comtemporary
+                <br>Contemporary
                 <br>Cake Design
             </div>
             <div id="arrow" class="text-white text-4xl opacity-0">
